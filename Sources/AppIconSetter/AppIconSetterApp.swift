@@ -10,11 +10,11 @@ struct Main {
             exit(IconApplier.runCommandLine(arguments: arguments))
         }
         // Troubleshooting helper: list the icons in a file and write each one
-        // out as a PNG. `AppIconFinder --dump-icons <file> <output-directory>`
+        // out as a PNG. `AppIconSetter --dump-icons <file> <output-directory>`
         if arguments.count > 3, arguments[1] == "--dump-icons" {
             exit(dumpIcons(source: arguments[2], outputDirectory: arguments[3]))
         }
-        AppIconFinderApp.main()
+        AppIconSetterApp.main()
     }
 }
 
@@ -35,11 +35,11 @@ private func dumpIcons(source: String, outputDirectory: String) -> Int32 {
     }
 }
 
-struct AppIconFinderApp: App {
+struct AppIconSetterApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var delegate
 
     var body: some Scene {
-        WindowGroup("AppIconFinder") {
+        WindowGroup("AppIconSetter") {
             ContentView()
                 .frame(minWidth: 720, minHeight: 520)
         }

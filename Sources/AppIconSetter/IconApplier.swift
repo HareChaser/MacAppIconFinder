@@ -40,7 +40,7 @@ enum IconApplier {
                 throw Error.failed("Couldn't encode the icon.")
             }
             let temp = FileManager.default.temporaryDirectory
-                .appendingPathComponent("AppIconFinder-\(UUID().uuidString).png")
+                .appendingPathComponent("AppIconSetter-\(UUID().uuidString).png")
             try data.write(to: temp)
             imageArgument = temp.path
         }
@@ -81,7 +81,7 @@ enum IconApplier {
         // Only clean up the hand-off file this app wrote — never a file the
         // user happened to point this flag at.
         let handoff = URL(fileURLWithPath: imagePath).lastPathComponent
-        if handoff.hasPrefix("AppIconFinder-"), handoff.hasSuffix(".png") {
+        if handoff.hasPrefix("AppIconSetter-"), handoff.hasSuffix(".png") {
             try? FileManager.default.removeItem(atPath: imagePath)
         }
         return ok ? 0 : 1

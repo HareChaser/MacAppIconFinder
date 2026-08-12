@@ -2,12 +2,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "AppIconFinder",
+    name: "AppIconSetter",
     platforms: [.macOS(.v13)],
     targets: [
         .executableTarget(
-            name: "AppIconFinder",
-            path: "Sources/AppIconFinder"
+            name: "AppIconSetter",
+            path: "Sources/AppIconSetter"
         )
     ]
 )

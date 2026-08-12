@@ -1,17 +1,17 @@
 #!/bin/bash
-# Builds AppIconFinder.app into ./build. Run: ./build.sh
+# Builds AppIconSetter.app into ./build. Run: ./build.sh
 set -euo pipefail
 
 cd "$(dirname "$0")"
 
-APP="build/AppIconFinder.app"
+APP="build/AppIconSetter.app"
 
 swift build -c release
 
 rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
 
-cp .build/release/AppIconFinder "$APP/Contents/MacOS/AppIconFinder"
+cp .build/release/AppIconSetter "$APP/Contents/MacOS/AppIconSetter"
 cp Resources/Info.plist "$APP/Contents/Info.plist"
 cp Resources/AppIcon.icns "$APP/Contents/Resources/AppIcon.icns"
 printf 'APPL????' > "$APP/Contents/PkgInfo"

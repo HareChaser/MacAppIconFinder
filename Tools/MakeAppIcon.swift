@@ -1,4 +1,4 @@
-// Draws AppIconFinder's own icon and writes it as a 1024×1024 PNG.
+// Draws AppIconSetter's own icon and writes it as a 1024×1024 PNG.
 // Run via Tools/make-icon.sh, which then packs it into Resources/AppIcon.icns.
 //
 //   swift Tools/MakeAppIcon.swift <output.png>

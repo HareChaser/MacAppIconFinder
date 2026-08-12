@@ -1,4 +1,4 @@
-# AppIconFinder
+# AppIconSetter
 
 A small macOS app for replacing the icon of an app.
 
@@ -15,11 +15,11 @@ always puts the stock icon back.
 ## Build and run
 
 ```bash
-./build.sh && open build/AppIconFinder.app
+./build.sh && open build/AppIconSetter.app
 ```
 
 Requires macOS 13+ and a Swift toolchain (Xcode or the Command Line Tools).
-The build produces `build/AppIconFinder.app`, which you can move to `/Applications`
+The build produces `build/AppIconSetter.app`, which you can move to `/Applications`
 like any other app.
 
 ## What it does
@@ -82,7 +82,7 @@ back. The button appears whenever the selected app currently has a custom icon.
 
 Apps you installed yourself are usually writable by your account and change
 without any prompt. Apps owned by `root` (most App Store installs) are not — for
-those, AppIconFinder asks first, then has macOS run the same write as an
+those, AppIconSetter asks first, then has macOS run the same write as an
 administrator. macOS shows its own password dialog; the app never sees or
 handles your password.
 
@@ -108,10 +108,10 @@ If you change the artwork, regenerate the `.icns` (this also refreshes
 
 ## Troubleshooting
 
-To see what AppIconFinder finds in a file without opening the UI:
+To see what AppIconSetter finds in a file without opening the UI:
 
 ```bash
-build/AppIconFinder.app/Contents/MacOS/AppIconFinder --dump-icons /path/to/file.exe /tmp/out
+build/AppIconSetter.app/Contents/MacOS/AppIconSetter --dump-icons /path/to/file.exe /tmp/out
 ```
 
 It prints one line per icon found and writes each as a PNG into the output directory.
@@ -120,11 +120,11 @@ It prints one line per icon found and writes each as a PNG into the output direc
 
 | Path | What's in it |
 | --- | --- |
-| `Sources/AppIconFinder/ContentView.swift` | The two-pane UI and drop targets |
-| `Sources/AppIconFinder/AppState.swift` | Selection, apply/restore flow, error surfacing |
-| `Sources/AppIconFinder/ICODecoder.swift` | `.ico` container parsing and per-entry decoding |
-| `Sources/AppIconFinder/PEIconExtractor.swift` | Windows PE resource walk |
-| `Sources/AppIconFinder/IconRenderer.swift` | Squaring, insetting, and the four style treatments |
-| `Sources/AppIconFinder/IconStyle.swift` | The style list and its labels |
-| `Sources/AppIconFinder/IconApplier.swift` | `setIcon` write, admin escalation, Dock refresh |
+| `Sources/AppIconSetter/ContentView.swift` | The two-pane UI and drop targets |
+| `Sources/AppIconSetter/AppState.swift` | Selection, apply/restore flow, error surfacing |
+| `Sources/AppIconSetter/ICODecoder.swift` | `.ico` container parsing and per-entry decoding |
+| `Sources/AppIconSetter/PEIconExtractor.swift` | Windows PE resource walk |
+| `Sources/AppIconSetter/IconRenderer.swift` | Squaring, insetting, and the four style treatments |
+| `Sources/AppIconSetter/IconStyle.swift` | The style list and its labels |
+| `Sources/AppIconSetter/IconApplier.swift` | `setIcon` write, admin escalation, Dock refresh |
 | `Tools/MakeAppIcon.swift` | Draws the app's own icon |
