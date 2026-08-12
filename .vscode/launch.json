@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:MacAppIconFinder}",
+            "name": "Debug AppIconFinder",
+            "target": "AppIconFinder",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug AppIconFinder"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:MacAppIconFinder}",
+            "name": "Release AppIconFinder",
+            "target": "AppIconFinder",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release AppIconFinder"
+        }
+    ]
+}
