@@ -10,6 +10,8 @@ You can also skip the second step entirely: choose an app, pick a style, and hit
 **Apply Icon** to restyle the app's *own* icon in place. **Restore Original**
 always puts the stock icon back.
 
+https://github.com/user-attachments/assets/d5a962ed-d297-4ac9-961e-82cf98e17a58
+
 ## Build and run
 
 ```bash
