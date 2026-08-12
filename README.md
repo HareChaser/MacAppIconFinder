@@ -1,6 +1,8 @@
 # AppIconFinder
 
-A small macOS app for replacing the icon of an app in `/Applications`.
+A small macOS app for replacing the icon of an app.
+
+https://github.com/user-attachments/assets/8343ef63-d460-4c0d-9206-ea0750798252
 
 Pick the application first, then pick the icon — a `.ico`, `.png`/`.jpg`, an `.icns`,
 or a Windows `.exe`/`.dll` whose icon you want to lift out. Both panes also accept
@@ -9,8 +11,6 @@ drag and drop.
 You can also skip the second step entirely: choose an app, pick a style, and hit
 **Apply Icon** to restyle the app's *own* icon in place. **Restore Original**
 always puts the stock icon back.
-
-https://github.com/user-attachments/assets/d5a962ed-d297-4ac9-961e-82cf98e17a58
 
 ## Build and run
 
