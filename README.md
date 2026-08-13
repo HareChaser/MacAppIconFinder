@@ -1,4 +1,4 @@
-# AppIconSetter
+# Mac App Icon Setter
 
 A small macOS app for replacing the icon of an app.
 
